@@ -15,7 +15,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        //ジャンプ
+        // ジャンプ
         if (Input.GetKeyDown(KeyCode.Space) && floor)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
@@ -26,12 +26,12 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        //移動
+        // 移動
         float x = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(x * speed, rb.linearVelocity.y);
     }
 
-    //boolの切り替え(地面についていない)
+    // boolの切り替え(地面についていない)
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
@@ -40,7 +40,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    //boolの切り替え(地面についた)
+    // boolの切り替え(地面についた)
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
