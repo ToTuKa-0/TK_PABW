@@ -21,8 +21,11 @@ public class ChcekOnObjject : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            if (canvas != null)
+            {
+                canvas.SetActive(false);
+            }
             canvas.SetActive(false);
         }
     }
-
 }
