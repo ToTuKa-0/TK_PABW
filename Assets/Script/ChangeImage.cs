@@ -6,18 +6,18 @@ public class ChangeImage : MonoBehaviour
     [SerializeField, Header("‰‚ß‚É•\¦‚³‚¹‚é‰æ‘œ")] Sprite sp1;
     [SerializeField, Header("•ÏX‚·‚é‰æ‘œ")] Sprite sp2;
 
-    Image image;
+    SpriteRenderer spriteRenderer;
     bool first = true;
 
     void Start()
     {
-        image = GetComponent<Image>();
-        image.sprite = sp1;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = sp1;
     }
 
     public void Swap()
     {
         first = !first;
-        image.sprite = first ? sp1 : sp2;
+        spriteRenderer.sprite = first ? sp1 : sp2;
     }
 }

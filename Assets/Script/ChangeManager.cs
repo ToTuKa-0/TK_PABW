@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ChangeManager : MonoBehaviour
 {
-    [SerializeField, Header("変更キー")] KeyCode changeKey = KeyCode.Space;
+    [SerializeField, Header("変更キー")] KeyCode changeKey = KeyCode.Z;
 
     ChangeImage[] changeImage;
     ChangeText[] changeText;
