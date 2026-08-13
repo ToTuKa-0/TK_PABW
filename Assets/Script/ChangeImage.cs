@@ -21,3 +21,5 @@ public class ChangeImage : MonoBehaviour
         spriteRenderer.sprite = first ? sp1 : sp2;
     }
 }
+
+

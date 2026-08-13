@@ -5,12 +5,14 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float speed = 0;
     [SerializeField] float jumpPower = 0;
 
-    private Rigidbody2D rb;
-    private bool floor;
+    Rigidbody2D rb;
+    SpriteRenderer sr;
+    bool floor;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -27,6 +29,15 @@ public class PlayerMove : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(x * speed, rb.linearVelocity.y);
+
+        if (x > 0)
+        {
+            sr.flipX = false;
+        }
+        else if (x < 0)
+        {
+            sr.flipX = true;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

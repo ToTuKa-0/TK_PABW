@@ -5,21 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scene/kari1.unity
-    guid: 008e4ffd3107e49479718bc33084774a
+    path: Assets/Scene/Title.unity
+    guid: d30f741ad11d3d24e89a37768679f9db
   - enabled: 1
-    path: Assets/Scene/kari2.unity
-    guid: 49978e9c380b17b47ab1fe014cee743e
-  - enabled: 0
-    path: Assets/Scene/Sample.unity
-    guid: 47c108be9243f51498b0e2128528936c
-  - enabled: 0
-    path: Assets/Scene/T.unity
-    guid: 6432a3440333b624680c8f54ceb721f9
+    path: Assets/Scene/StageSelect.unity
+    guid: e3484ef4b7c4d0b41928d8cb02bbd3ed
+  - enabled: 1
+    path: Assets/Scene/Stage1.unity
+    guid: d6fd0892aafbfd24cb16e0cbc383bbf2
+  - enabled: 1
+    path: Assets/Scene/Stage2.unity
+    guid: c911cfa2a196aef46ac74bd242d9538f
+  - enabled: 1
+    path: Assets/Scene/Stage3.unity
+    guid: af4e7d2e934dd4b48895f078ac56a6b1
+  - enabled: 1
+    path: Assets/Scene/Stage4.unity
+    guid: 25639ddd07143414eadfc358e9f0fd27
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

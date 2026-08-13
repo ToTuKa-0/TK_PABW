@@ -17,8 +17,19 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(
+        Vector2 direction = (target - (Vector2)transform.position).normalized;
+
+        if (direction != Vector2.zero)
+        {
+            Vector3 scale = transform.localScale;
+
+            transform.right = direction;
+
+            transform.localScale = scale;
+
+            transform.position = Vector2.MoveTowards(
             transform.position, target, moveSpeed * Time.deltaTime);
+        }
 
         if (Vector2.Distance(transform.position, target) < 0.01f)
         {
